@@ -9,9 +9,14 @@ $(document).ready(function() {
    // upperCaseItems.sort();
    var toShow = "";
 
-   upperCaseItems.forEach(function(item) {
-    toShow += "<li>"+ item +"</li>"
-   });
+   // upperCaseItems.forEach(function(item) {
+   //  toShow += "<li>"+ item +"</li>"
+   // });
+console.log(upperCaseItems.length);
+   for(var i = 0; i < uppserCaseItems.length; i++) {
+
+     oShow += "<li>"+ item +"</li>";
+   }
 //  var orderedList = " <ul><li>item1</li><li>item2</li></ul>"
 
 
