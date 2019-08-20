@@ -2,13 +2,13 @@ $(document).ready(function() {
   $("#items").submit(function(event) {
     var items = ["item1","item2","item3","item4","item5","item6"];
     var upperCaseItems = items.map(function(item) {
-      var userInput = $("input#"+item).val();
+      return $("input#"+item).val().toUpperCase();
     //var orderedList = items.map(function(item) {
-      return userInput.toUpperCase();
-   });
-   upperCaseItems.sort();
+      // return userInput.toUpperCase();
+   }).sort();
+   // upperCaseItems.sort();
    var toShow = "";
-   toShow="zubeyde";
+
    upperCaseItems.forEach(function(item) {
     toShow += "<li>"+ item +"</li>"
    });
