@@ -1,14 +1,24 @@
 $(document).ready(function() {
   $("#items").submit(function(event) {
     var items = ["item1","item2","item3","item4","item5","item6"];
-    items.forEach(function(item) {
-      var userInput = $("input#"item).val();
-    var orderedList = items.map(function(item) {
-     return item.toUpperCase();
+    var upperCaseItems = items.map(function(item) {
+      var userInput = $("input#"+item).val();
+    //var orderedList = items.map(function(item) {
+      return userInput.toUpperCase();
    });
-});
+   upperCaseItems.sort();
+   var toShow = "";
+   toShow="zubeyde";
+   upperCaseItems.forEach(function(item) {
+    toShow += "<li>"+ item +"</li>"
+   });
+//  var orderedList = " <ul><li>item1</li><li>item2</li></ul>"
 
 
+//var item1Value = $("#item1").val();
+//var doubledNumbers = numbers.map(function(number) {
+  //return number * 2;
+//});
 
 
   //  var person1Input = $("input#person1").val();
@@ -25,8 +35,8 @@ $(document).ready(function() {
   //  $(".verb").text(verbInput);
     //$(".noun").text(nounInput);
 
-    $("#orderedlist").text(orderedList);
-
+    $("#orderedlist").html(toShow);
+    $("#items").hide();
     event.preventDefault();
 
 });
